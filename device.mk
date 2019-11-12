@@ -392,6 +392,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage/lineage-sdk \
+    $(LOCAL_PATH)/overlay-lineage/packages/apps/Snap \
     $(LOCAL_PATH)/overlay-system
 
 # Power
