@@ -42,6 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio feature flags
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.multi_voice_session.enable=true \
+    vendor.audio.feature.a2dp_offload.enable=true \
     vendor.audio.feature.afe_proxy.enable=true \
     vendor.audio.feature.anc_headset.enable=true \
     vendor.audio.feature.audiozoom.enable=false \
@@ -94,7 +95,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.emb_wp_mode=true \
     ro.bluetooth.wipower=true \
     vendor.bluetooth.soc=cherokee \
-    vendor.qcom.bluetooth.soc=cherokee
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
+    persist.bluetooth.a2dp_offload.disabled=false \
+    persist.vendor.bt.a2dp.aac_whitelist=false \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
+    ro.bluetooth.a2dp_offload.supported=true \
+    ro.bluetooth.library_name=libbluetooth_qti.so \
+    vendor.qcom.bluetooth.soc=cherokee 
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
