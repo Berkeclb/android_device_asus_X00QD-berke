@@ -390,6 +390,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-system
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service \
