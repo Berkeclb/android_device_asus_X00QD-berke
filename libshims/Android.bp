@@ -1,5 +1,4 @@
-//
-// Copyright (C) 2020 The LineageOS Project
+// Copyright (C) 2018 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,10 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_library {
-    name: "libshim_dpmframework",
+cc_library_shared {
+    name: "libshim_wfdservice",
+    srcs: ["wfdservice_shim.cpp"],   
+}
+
+cc_library_shared {
+    name: "libcutils_shim",
     srcs: [
-        "strdup16to8.cpp",
-        "strdup8to16.cpp",
+        "libcutils_shim/strdup8to16.cpp",
+        "libcutils_shim/strdup16to8.cpp",
     ],
+    shared_libs: ["libcutils"],
+    product_specific: true,
 }

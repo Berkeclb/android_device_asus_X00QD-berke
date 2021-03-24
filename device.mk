@@ -206,10 +206,11 @@ PRODUCT_PACKAGES += \
     memtrack.sdm660 \
     libgenlock
 
-# DPM
+# SHIMS
 PRODUCT_PACKAGES += \
-    libshim_dpmframework
-
+    libcutils_shim \
+    libshim_wfdservice
+    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
