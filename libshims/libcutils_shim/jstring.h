@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-#ifndef __CUTILS_STRING16_H
-#define __CUTILS_STRING16_H
+#pragma once
 
 #include <stdint.h>
 #include <stddef.h>
@@ -27,7 +26,6 @@ extern "C" {
 #if __STDC_VERSION__ < 201112L && __cplusplus < 201103L
   typedef uint16_t char16_t;
 #endif
-  // otherwise char16_t is a keyword with the right semantics
 
 extern char * strndup16to8 (const char16_t* s, size_t n);
 extern size_t strnlen16to8 (const char16_t* s, size_t n);
@@ -42,5 +40,3 @@ extern char16_t * strcpylen8to16 (char16_t *dest, const char*s, int length,
 #ifdef __cplusplus
 }
 #endif
-
-#endif /* __CUTILS_STRING16_H */

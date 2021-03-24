@@ -34,6 +34,29 @@ fi
 . "$HELPER"
 
 # Default to sanitizing the vendor folder before extraction
+
+function blob_fixup() {
+    case "${1}" in
+
+    lib64/libwfdnative.so)
+        patchelf --add-needed "libshim_wfdservice.so" "${2}"
+        ;;
+    
+    lib/libwfdcommonutils.so)
+        patchelf --add-needed "libshim_wfdservice.so" "${2}"
+        ;;
+    
+    lib/libwfdmmsrc.so)
+        patchelf --add-needed "libshim_wfdservice.so" "${2}"
+        ;;
+
+    product/lib64/libdpmframework.so)
+        patchelf --add-needed libcutils_shim.so "${2}"
+        ;;
+
+    esac
+}
+
 CLEAN_VENDOR=true
 
 while [ "$1" != "" ]; do
