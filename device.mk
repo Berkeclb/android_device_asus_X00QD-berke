@@ -206,7 +206,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti.vendor \
     libstagefright_enc_common \
     vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor
+    vendor.display.config@2.0.vendor \
     libgenlock
 
 # SHIMS
