@@ -329,7 +329,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb \
     ro.adb.secure=0 \
     ro.secure=0 \
-    ro.debuggable=1        
+    ro.debuggable=1
+    
+# Zram Writeback 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.zram.mark_idle_delay_mins=60 \
+    ro.zram.first_wb_delay_mins=180 \
+    ro.zram.periodic_wb_delay_hours=24
 
 # gesture
 PRODUCT_PROPERTY_OVERRIDES += \
