@@ -212,7 +212,8 @@ PRODUCT_PACKAGES += \
 # SHIMS
 PRODUCT_PACKAGES += \
     libcutils_shim \
-    libshim_wfdservice
+    libshim_wfdservice \
+    libmms_hal_vstab_shim
     
 # DRM
 PRODUCT_PACKAGES += \

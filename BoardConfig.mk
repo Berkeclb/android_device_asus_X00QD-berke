@@ -204,6 +204,10 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
 
+#Shim
+TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib/libmms_hal_vstab.so|libmms_hal_vstab_shim.so \
+
 # Treble
 BOARD_VNDK_VERSION := current
 BOARD_VNDK_RUNTIME_DISABLE := true
