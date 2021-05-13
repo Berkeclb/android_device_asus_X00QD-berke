@@ -24,23 +24,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit some AEX stuff.
 
-$(call inherit-product, vendor/nezuko/config/common_full_phone.mk)
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
 
 # Inherit from X00QD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Bootanimation
-TARGET_BOOT_ANIMATION_RES := 1080
+# GApps
+USE_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
-# Official build
-NEZUKO_MAINTAINER := MLZ94
-NEZUKO_DONATE := https://paypal.me/MLZdev
+# Bootanimation&Corvusstuff
+TARGET_BOOT_ANIMATION_RES := 1080
+EXTRA_FOD_ANIMATIONS := true
 
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00QD
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := nezuko_X00QD
+PRODUCT_NAME := corvus_X00QD
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 

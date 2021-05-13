@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nezuko_X00QD.mk
+    $(LOCAL_DIR)/corvus_X00QD.mk
 
 COMMON_LUNCH_CHOICES := \
-    nezuko_X00QD-userdebug \
-    nezuko_X00QD-eng
+    corvus_X00QD-userdebug \
+    corvus_X00QD-eng
