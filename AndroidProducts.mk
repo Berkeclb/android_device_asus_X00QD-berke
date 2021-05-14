@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_X00QD.mk
+    $(LOCAL_DIR)/corvus_X00QD.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_X00QD-userdebug \
-    lineage_X00QD-eng \
-    lineage_X00QD-user 
+    corvus_X00QD-userdebug \
+    corvus_X00QD-eng
+
