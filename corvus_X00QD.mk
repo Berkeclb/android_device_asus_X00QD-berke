@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit some common aosp stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
 # Inherit from X00QD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -31,10 +31,16 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00QD
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := lineage_X00QD
+PRODUCT_NAME := corvus_X00QD
 
-# Gapps
+#BOOTANIM
+TARGET_BOOT_ANIMATION_RES := 1080
+scr_resolution := 1080
+
+# GApps
+USE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
@@ -51,10 +57,3 @@ BUILD_FINGERPRINT := google/redfin/redfin:11/RQ2A.210505.003/7255357:user/releas
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
-
-# Sakura flags
-SAKURA_OFFICIAL := true
-SAKURA_MAINTAINER := Henrique Ferreira
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SCREEN_HEIGHT := 2160
-TARGET_SCREEN_WIDTH := 1080
