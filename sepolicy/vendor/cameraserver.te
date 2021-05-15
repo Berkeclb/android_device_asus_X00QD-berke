@@ -1,3 +1,4 @@
 binder_call(cameraserver, mediacodec)
 allow cameraserver property_socket:sock_file { write };
 allow cameraserver init:unix_stream_socket { connectto };
+allow cameraserver default_android_hwservice:hwservice_manager { find };
