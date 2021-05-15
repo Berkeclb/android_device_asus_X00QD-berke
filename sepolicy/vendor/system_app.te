@@ -1,2 +1,10 @@
 allow system_app vendor_camera_data_file:dir { write lock add_name remove_name search open };
 allow system_app vendor_camera_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open };
+
+allow system_app sysfs_battery_supply:dir { search };
+allow system_app sysfs_battery_supply:file { read };
+allow system_app sysfs_battery_supply:file { open };
+allow system_app sysfs_battery_supply:file { getattr }; 
+
+allow system_app default_android_service:service_manager { find };
+allow system_app default_android_hwservice:hwservice_manager { find };
