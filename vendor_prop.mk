@@ -334,3 +334,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # gesture
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.asus.gesture.switch=1
+    
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.corvus.maintainer=Berkeclb
