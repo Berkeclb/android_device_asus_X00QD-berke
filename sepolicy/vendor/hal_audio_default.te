@@ -7,3 +7,4 @@ allow hal_audio_default bluetooth_prop:file { open read getattr };
 allow hal_audio_default mnt_vendor_file:dir { search };
 allow hal_audio_default property_socket:sock_file { write };
 allow hal_audio_default init:unix_stream_socket { connectto };
+allow hal_audio_default adb_data_file:file { open };
