@@ -391,16 +391,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service \
-    android.hardware.power@1.0-impl \
-    power.qcom \
-    android.hardware.power.stats@1.0-service.mock
-    
-# Perf
-PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
     vendor.qti.hardware.perf@1.0.vendor \
-    vendor.qti.hardware.perf@2.0.vendor
-
+    vendor.qti.hardware.perf@2.0.vendor \
+    android.hardware.power.stats@1.0-service.mock
 
 # Protobuf
 PRODUCT_PACKAGES += \
