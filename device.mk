@@ -84,6 +84,8 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.audio.common@2.0-util \
     android.hardware.audio.common@5.0-util \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    android.hardware.bluetooth.audio@2.0-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.sdm660 \
